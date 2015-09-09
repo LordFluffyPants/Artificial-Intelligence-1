@@ -1,0 +1,13 @@
+Simple Reflexive Agent in the vacuum example
+
+State						Performance
+A Dirty | B Dirty | A 		-994
+A Dirty | B Dirty | B		-994
+A Dirty | B Clean | A 		-997
+A Dirty | B Clean | B		-997
+A Clean | B Dirty | A 		-997
+A Clean | B Dirty | B		-997
+A Clean | B Clean | A 		-1000
+A Clean | B Clean | B 		-1000			
+
+The Overall average score for the simple reflexive agent is -997. The performance metric is so low for the simple reflexive because the agent has no record of the state of the world and thus will continue to run untill it reaches its life cycle.
