@@ -67,6 +67,7 @@ public class BFSearch {
                 System.out.println("The Cost to find the solution was: " + tempNode.getCost());
                 System.out.println("The Total number of expansions were: " + expansions);
                 System.out.println("The maximum queue size was: " + maxQueueSize);
+                break;
             }
         }
     }

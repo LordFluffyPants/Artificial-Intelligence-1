@@ -21,18 +21,18 @@ public class DFSearch {
         preformDFSearch(stack);
     }
 
-    public static boolean checkRepeat(SearchNode node)
+    public static boolean checkForRepeating(SearchNode pCheckNode)
     {
         boolean retVal = false;
-        SearchNode checkNode = node;
-
-        while (checkNode.getParent() != null & !retVal)
+        SearchNode checkNode = pCheckNode;
+        while (pCheckNode.getParent() != null && !retVal)
         {
-            if (node.getParent().getCurrentState().equals(checkNode.getCurrentState()))
+            if (pCheckNode.getParent().getCurrentState().equals(checkNode.getCurrentState()))
             {
                 retVal = true;
             }
-            node = node.getParent();
+            pCheckNode = pCheckNode.getParent();
+
         }
         return retVal;
     }
@@ -58,7 +58,7 @@ public class DFSearch {
                 {
                     SearchNode childNode = new SearchNode(states,tempNode,tempNode.getCost() + states.getCost(),0);
 
-                    if (!checkRepeat(childNode))
+                    if (!checkForRepeating(childNode))
                     {
                         stack.add(childNode);
                     }
@@ -70,6 +70,7 @@ public class DFSearch {
                 System.out.println("The cost of the search was: "+ tempNode.getCost());
                 System.out.println("The total number of expansions were: " + expansions);
                 System.out.println("The maximum queue size was: " + maxQueueSize);
+                break;
             }
         }
     }

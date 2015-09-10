@@ -1,6 +1,7 @@
 package Problem6.src.Puzzle;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by jakehayhurst on 9/7/15.
@@ -42,9 +43,19 @@ public class State {
         return emptySpace;
     }
 
+    private int[] copyBoard()
+    {
+        int[] copy = new int[9];
+        for (int i = 0; i < copy.length; i++)
+        {
+            copy[i] = currentBoard[i];
+        }
+        return copy;
+    }
+
     public void swap(int holePosition, int swapPosition, ArrayList<State> successor)
     {
-        int[] temp = currentBoard;
+        int[] temp = copyBoard();
         int swapValue = temp[swapPosition];
         temp[swapPosition] = 0;
         temp[holePosition] = swapValue;
@@ -85,6 +96,7 @@ public class State {
 
     public void setManhattanDistance()
     {
+        //TODO need to fix the heuristic
         int index = -1;
 
         for (int y = 0; y < 3; y++)
@@ -94,15 +106,35 @@ public class State {
                 index++;
                 int value = (currentBoard[index] -1);
 
-                if (value != -1)
+                if (!((value == 7 && index == 8) ||(value == 6 && index == 7)))
                 {
-                    int horizontal = value % 3;
-                    int vertical = value /3;
+                    if (value != -1)
+                    {
+                        int horizontal = value % 3;
+                        int vertical = value /3;
 
-                    manhattanDistance += Math.abs(vertical - y) + Math.abs(horizontal -x);
+                        manhattanDistance += Math.abs(vertical - y) + Math.abs(horizontal -x);
+                    }
                 }
+
             }
         }
+    }
+
+    public int[] getCurrentBoard()
+    {
+        return currentBoard;
+    }
+
+    public boolean equals(State state)
+    {
+        if (Arrays.equals(currentBoard, state.getCurrentBoard()))
+        {
+            return true;
+        }
+        else
+            return false;
+
     }
 
 }
