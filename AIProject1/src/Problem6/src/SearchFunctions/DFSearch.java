@@ -7,9 +7,6 @@ import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 import java.util.ArrayList;
 import java.util.Stack;
 
-/**
- * Created by jakehayhurst on 9/8/15.
- */
 public class DFSearch {
 
     public static void search(int[] board)

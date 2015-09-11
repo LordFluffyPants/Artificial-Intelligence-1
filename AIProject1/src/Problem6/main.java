@@ -6,9 +6,6 @@ import Problem6.src.SearchFunctions.BFSearch;
 import Problem6.src.SearchFunctions.DFSearch;
 import Problem6.src.SearchFunctions.RBFSearch;
 
-/**
- * Created by jakehayhurst on 9/6/15.
- */
 public class main {
 
     public static void main(String [] args)

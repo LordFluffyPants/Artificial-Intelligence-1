@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- * Created by jakehayhurst on 9/9/15.
- */
 public class RBFSearch {
     private static int maxQueueSize = 0;
     private static int expansions = 0;

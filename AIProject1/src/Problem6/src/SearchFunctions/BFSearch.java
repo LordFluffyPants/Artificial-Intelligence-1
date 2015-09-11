@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- * Created by jakehayhurst on 9/7/15.
- */
 public class BFSearch {
 
     public static void Search(int[] board)

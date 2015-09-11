@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- * Created by jakehayhurst on 9/8/15.
- */
 public class AStarSearch
 {
     public static void search(int[] board)

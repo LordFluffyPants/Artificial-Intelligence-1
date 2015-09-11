@@ -1,8 +1,6 @@
 package Problem6.src.Puzzle;
 
-/**
- * Created by jakehayhurst on 9/7/15.
- */
+
 public class SearchNode {
     private State currentState;
     private SearchNode parent;

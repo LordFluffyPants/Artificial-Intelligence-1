@@ -6,10 +6,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by jakehayhurst on 9/6/15.
- */
 public class ImportManager
 {
     private ArrayList<Integer> map = new ArrayList<Integer>();
