@@ -1,0 +1,251 @@
+1,2,3,4,5,6,7,0,8
+BFSearch:
+The Cost to find the solution was: 1
+The Total number of expansions were: 2
+The maximum queue size was: 6
+
+DFSearch:
+The cost of find the solution was: 29
+The total number of expansions were: 29
+The maximum queue size was: 27
+
+A* Search:
+The Cost to find the solution was: 1
+The Total number of expansions were: 1
+The maximum queue size was: 2
+
+Recursive BFSearch:
+The Cost to find the solution was: 1
+The Total number of expansions were: 2
+The maximum queue size was: 5
+
+1,2,3,4,5,6,7,8,0
+BFSearch:
+The Cost to find the solution was: 2
+The Total number of expansions were: 7
+The maximum queue size was: 14
+
+DFSearch:
+The cost of find the solution was: 2
+The total number of expansions were: 2
+The maximum queue size was: 3
+
+A* Search:
+The Cost to find the solution was: 2
+The Total number of expansions were: 2
+The maximum queue size was: 1
+
+Recursive BFSearch:
+The Cost to find the solution was: 2
+The Total number of expansions were: 6
+The maximum queue size was: 8
+
+1,2,3,4,5,0,7,8,6
+BFSearch:
+The Cost to find the solution was: 3
+The Total number of expansions were: 22
+The maximum queue size was: 42
+
+DFSearch:
+The cost of find the solution was: 27
+The total number of expansions were: 27
+The maximum queue size was: 26
+
+A* Search:
+The Cost to find the solution was: 3
+The Total number of expansions were: 3
+The maximum queue size was: 1
+
+Recursive BFSearch:
+The Cost to find the solution was: 3
+The Total number of expansions were: 12
+The maximum queue size was: 14
+
+1,2,0,4,5,3,7,8,6
+BFSearch:
+The Cost to find the solution was: 4
+The Total number of expansions were: 35
+The maximum queue size was: 66
+
+DFSearch:
+The cost of find the solution was: 106332
+The total number of expansions were: 115909
+The maximum queue size was: 69557
+
+A* Search:
+The Cost to find the solution was: 4
+The Total number of expansions were: 4
+The maximum queue size was: 1
+
+Recursive BFSearch:
+The Cost to find the solution was: 4
+The Total number of expansions were: 16
+The maximum queue size was: 18
+
+1,0,2,4,5,3,7,8,6
+BFSearch:
+The Cost to find the solution was: 5
+The Total number of expansions were: 254
+The maximum queue size was: 450
+
+DFSearch:
+The cost of find the solution was: 29
+The total number of expansions were: 29
+The maximum queue size was: 27
+
+A* Search:
+The Cost to find the solution was: 5
+The Total number of expansions were: 5
+The maximum queue size was: 1
+
+Recursive BFSearch:
+The Cost to find the solution was: 5
+The Total number of expansions were: 54
+The maximum queue size was: 44
+
+1,5,2,4,0,3,7,8,6
+BFSearch:
+The Cost to find the solution was: 6
+The Total number of expansions were: 555
+The maximum queue size was: 1026
+
+DFSearch:
+The cost of find the solution was: 1794
+The total number of expansions were: 1831
+The maximum queue size was: 1359
+
+A* Search:
+The Cost to find the solution was: 6
+The Total number of expansions were: 6
+The maximum queue size was: 1
+
+Recursive BFSearch:
+The Cost to find the solution was: 6
+The Total number of expansions were: 78
+The maximum queue size was: 68
+
+1,5,2,0,4,3,7,8,6
+BFSearch:
+The Cost to find the solution was: 7
+The Total number of expansions were: 1726
+The maximum queue size was: 3074
+
+DFSearch:
+The cost of find the solution was: 107179
+The total number of expansions were: 117144
+The maximum queue size was: 70004
+
+A* Search:
+The Cost to find the solution was: 7
+The Total number of expansions were: 7
+The maximum queue size was: 1
+
+Recursive BFSearch:
+The Cost to find the solution was: 7
+The Total number of expansions were: 154
+The maximum queue size was: 120
+
+1,5,2,7,4,3,0,8,6
+BFSearch:
+The Cost to find the solution was: 8
+The Total number of expansions were: 2531
+The maximum queue size was: 4610
+
+DFSearch:
+The cost of find the solution was: 1794
+The total number of expansions were: 1831
+The maximum queue size was: 1359
+
+A* Search:
+The Cost to find the solution was: 8
+The Total number of expansions were: 8
+The maximum queue size was: 1
+
+Recursive BFSearch:
+The Cost to find the solution was: 8
+The Total number of expansions were: 188
+The maximum queue size was: 154
+
+1,5,2,7,4,3,8,0,6
+BFSearch:
+The Cost to find the solution was: 9
+The Total number of expansions were: 13502
+The maximum queue size was: 24066
+
+DFSearch:
+The cost of find the solution was: 1793
+The total number of expansions were: 1831
+The maximum queue size was: 1359
+
+A* Search:
+The Cost to find the solution was: 9
+The Total number of expansions were: 9
+The maximum queue size was: 1
+
+Recursive BFSearch:
+The Cost to find the solution was: 9
+The Total number of expansions were: 470
+The maximum queue size was: 358
+
+1,5,2,7,4,3,8,6,0
+BFSearch:
+The Cost to find the solution was: 10
+The Total number of expansions were: 32227
+The maximum queue size was: 56834
+
+DFSearch:
+The cost of find the solution was: 22580
+The total number of expansions were: 23154
+The maximum queue size was: 16721
+
+A* Search:
+The Cost to find the solution was: 10
+The Total number of expansions were: 10
+The maximum queue size was: 1
+
+Recursive BFSearch:
+The Cost to find the solution was: 10
+The Total number of expansions were: 820
+The maximum queue size was: 588
+
+1,5,2,7,4,0,8,6,3
+BFSearch:
+The Cost to find the solution was: 11
+The Total number of expansions were: 95422
+The maximum queue size was: 171522
+
+DFSearch:
+The cost of find the solution was: 107179
+The total number of expansions were: 117144
+The maximum queue size was: 70004
+
+A* Search:
+The Cost to find the solution was: 11
+The Total number of expansions were: 11
+The maximum queue size was: 1
+
+Recursive BFSearch:
+The Cost to find the solution was: 11
+The Total number of expansions were: 1306
+The maximum queue size was: 994
+
+1,5,2,7,0,4,8,6,3
+BFSearch:
+The Cost to find the solution was: 12
+The Total number of expansions were: 544811
+The maximum queue size was: 957954
+
+DFSearch:
+The cost of find the solution was: 70012
+The total number of expansions were: 73154
+The maximum queue size was: 48821
+
+A* Search:
+The Cost to find the solution was: 12
+The Total number of expansions were: 89
+The maximum queue size was: 20
+
+Recursive BFSearch:
+The Cost to find the solution was: 12
+The Total number of expansions were: 3398
+The maximum queue size was: 2352

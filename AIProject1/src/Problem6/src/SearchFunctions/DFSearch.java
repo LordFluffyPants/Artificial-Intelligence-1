@@ -67,7 +67,7 @@ public class DFSearch {
             }
             else
             {
-                System.out.println("The cost of the search was: "+ tempNode.getCost());
+                System.out.println("The cost of find the solution was: "+ tempNode.getCost());
                 System.out.println("The total number of expansions were: " + expansions);
                 System.out.println("The maximum queue size was: " + maxQueueSize);
                 break;
