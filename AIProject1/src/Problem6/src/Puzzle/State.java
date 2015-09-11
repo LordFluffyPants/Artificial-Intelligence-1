@@ -17,6 +17,7 @@ public class State {
     {
         currentBoard = board;
         setManhattanDistance();
+//        setFaultyManhattanDistance();
     }
 
     public int getCost()
@@ -96,7 +97,6 @@ public class State {
 
     public void setManhattanDistance()
     {
-        //TODO need to fix the heuristic
         int index = -1;
 
         for (int y = 0; y < 3; y++)
@@ -106,6 +106,36 @@ public class State {
                 index++;
                 int value = (currentBoard[index] -1);
 
+                if (!((value == 7 && index == 8) ||(value == 6 && index == 7)))
+                {
+                    if (value != -1)
+                    {
+                        int horizontal = value % 3;
+                        int vertical = value /3;
+
+                        manhattanDistance += Math.abs(vertical - y) + Math.abs(horizontal -x);
+                    }
+                }
+
+            }
+        }
+    }
+
+    public void setFaultyManhattanDistance()
+    {
+        int index = -1;
+
+        for (int y = 0; y < 3; y++)
+        {
+            for (int x = 0; x < 3; x++)
+            {
+                index++;
+                int value = (currentBoard[index] -1);
+                if (Math.round(Math.random()) == 1)
+                {
+                    System.out.println("Added extra value to random manhattan");
+                    manhattanDistance += 1;
+                }
                 if (!((value == 7 && index == 8) ||(value == 6 && index == 7)))
                 {
                     if (value != -1)

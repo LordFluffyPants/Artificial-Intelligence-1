@@ -1,4 +1,4 @@
-1,2,3,4,5,6,7,0,8
+Starting Configuration: 1,2,3,4,5,6,7,0,8
 BFSearch:
 The Cost to find the solution was: 1
 The Total number of expansions were: 2
@@ -19,7 +19,8 @@ The Cost to find the solution was: 1
 The Total number of expansions were: 2
 The maximum queue size was: 5
 
-1,2,3,4,5,6,7,8,0
+
+Starting Configuration: 1,2,3,4,5,6,7,8,0
 BFSearch:
 The Cost to find the solution was: 2
 The Total number of expansions were: 7
@@ -40,7 +41,8 @@ The Cost to find the solution was: 2
 The Total number of expansions were: 6
 The maximum queue size was: 8
 
-1,2,3,4,5,0,7,8,6
+
+Starting Configuration: 1,2,3,4,5,0,7,8,6
 BFSearch:
 The Cost to find the solution was: 3
 The Total number of expansions were: 22
@@ -61,7 +63,8 @@ The Cost to find the solution was: 3
 The Total number of expansions were: 12
 The maximum queue size was: 14
 
-1,2,0,4,5,3,7,8,6
+
+Starting Configuration: 1,2,0,4,5,3,7,8,6
 BFSearch:
 The Cost to find the solution was: 4
 The Total number of expansions were: 35
@@ -82,7 +85,8 @@ The Cost to find the solution was: 4
 The Total number of expansions were: 16
 The maximum queue size was: 18
 
-1,0,2,4,5,3,7,8,6
+
+Starting Configuration: 1,0,2,4,5,3,7,8,6
 BFSearch:
 The Cost to find the solution was: 5
 The Total number of expansions were: 254
@@ -103,7 +107,8 @@ The Cost to find the solution was: 5
 The Total number of expansions were: 54
 The maximum queue size was: 44
 
-1,5,2,4,0,3,7,8,6
+
+Starting Configuration: 1,5,2,4,0,3,7,8,6
 BFSearch:
 The Cost to find the solution was: 6
 The Total number of expansions were: 555
@@ -124,7 +129,8 @@ The Cost to find the solution was: 6
 The Total number of expansions were: 78
 The maximum queue size was: 68
 
-1,5,2,0,4,3,7,8,6
+
+Starting Configuration: 1,5,2,0,4,3,7,8,6
 BFSearch:
 The Cost to find the solution was: 7
 The Total number of expansions were: 1726
@@ -145,7 +151,8 @@ The Cost to find the solution was: 7
 The Total number of expansions were: 154
 The maximum queue size was: 120
 
-1,5,2,7,4,3,0,8,6
+
+Starting Configuration: 1,5,2,7,4,3,0,8,6
 BFSearch:
 The Cost to find the solution was: 8
 The Total number of expansions were: 2531
@@ -166,7 +173,8 @@ The Cost to find the solution was: 8
 The Total number of expansions were: 188
 The maximum queue size was: 154
 
-1,5,2,7,4,3,8,0,6
+
+Starting Configuration: 1,5,2,7,4,3,8,0,6
 BFSearch:
 The Cost to find the solution was: 9
 The Total number of expansions were: 13502
@@ -187,7 +195,8 @@ The Cost to find the solution was: 9
 The Total number of expansions were: 470
 The maximum queue size was: 358
 
-1,5,2,7,4,3,8,6,0
+
+Starting Configuration: 1,5,2,7,4,3,8,6,0
 BFSearch:
 The Cost to find the solution was: 10
 The Total number of expansions were: 32227
@@ -208,7 +217,8 @@ The Cost to find the solution was: 10
 The Total number of expansions were: 820
 The maximum queue size was: 588
 
-1,5,2,7,4,0,8,6,3
+
+Starting Configuration: 1,5,2,7,4,0,8,6,3
 BFSearch:
 The Cost to find the solution was: 11
 The Total number of expansions were: 95422
@@ -229,7 +239,8 @@ The Cost to find the solution was: 11
 The Total number of expansions were: 1306
 The maximum queue size was: 994
 
-1,5,2,7,0,4,8,6,3
+
+Starting Configuration: 1,5,2,7,0,4,8,6,3
 BFSearch:
 The Cost to find the solution was: 12
 The Total number of expansions were: 544811
@@ -249,3 +260,5 @@ Recursive BFSearch:
 The Cost to find the solution was: 12
 The Total number of expansions were: 3398
 The maximum queue size was: 2352
+
+This matches the theoritical limits described in class. A* preforming the best with a tight Heuristic. The Heuristic has also been proven to behave the best for solving the N-puzzle. The Next best preforming is RBFS allowing less expansions and also reducing the Queue Size. The Next best preforming search was the Breadth First Search preforming roughly the same as RBFS. The worst preforming search was the Depth First Search. This is because the search uses a stack and exhausts all child nodes before moving onto the next nodes in the stack. There are some cases where DFS is able to preform relatively well and find the optimal path with the least cost. This is because of how the child nodes are spawned and added to the stack.

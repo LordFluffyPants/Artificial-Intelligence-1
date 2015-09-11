@@ -3,6 +3,6 @@ a) How large is the state space of the 8-puzzle?
 b) How large is the reachable state space
     The reachable states space is 9!/2
 c) Is there an exemplar of an unreachable state, how large is the reachable state space from that goal?
-	If the reachable state space is 9!/2 then something that is out of the scope would be 9!/2 + 1. Thus making the reachable state space from that goal being 9!/2 as well because it will encompas the remainder of the state space.
+	If the reachable state space is 9!/2 then something that is out of the scope would be 9!/2 + 1. Thus making the reachable state space from that goal being 9!/2 as well because it will encompass the remainder of the state space.
 d) Is there an overlap between the reachable sets?
-	There is no overlap between the two reachable state spaces because each reachable state space encompases one half of the entire state space. This means no matter what using two goals 
+	There is no overlap between the two reachable state spaces because each reachable state space encompasses one half of the entire state space. This means no matter what using two goals
