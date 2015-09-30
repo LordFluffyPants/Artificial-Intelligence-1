@@ -2,7 +2,9 @@ package Problem6.src.Puzzle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
+/**
+ * Created by John Wesley Hayhurst & Austin Schaffer
+ */
 public class State {
     private final int[] GOAL = {1,2,3,4,5,6,0,7,8};
     private final int cost = 1;

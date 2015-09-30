@@ -1,6 +1,0 @@
-If the heuristic overestimates for h no more than c. Meaning that if the heuristic at most adds 1 to the heuristic cost of a random node then the fcost of that node will be off by 1. If there is another node that has the same cost as the node with the faulty heuristic then the search will take one of the two nodes of the same value. When it takes the non correct, non faulty heuristic path, the cost will then be offset by that value as it will be off by one place. This will happen with increasing values of c making at the most the cost offset by c. This is not always the case as the function might choose the better path depending how it breaks the heuristic cost tie.
-
-See the faultyManhattanDistance() function to see a heuristic cost with a value added randomly. The function will print out a confirmation that a value that is added to a random board state. One sample is when 40 random states overestimated by adding 1 to those states. This makes the c become 40 and the following was the result of the search with the starting state of 1,2,3,4,0,6,7,5,8
-The Cost to find the solution was: 26
-The Total number of expansions were: 197
-The maximum queue size was: 22

@@ -6,7 +6,9 @@ import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 
 import java.util.ArrayList;
 import java.util.Stack;
-
+/**
+ * Created by John Wesley Hayhurst & Austin Schaffer
+ */
 public class DFSearch {
 
     public static void search(int[] board)

@@ -1,0 +1,4 @@
+To compile and run any of the examples simply go into the folder of the algorithim that you want to run
+gcc the main file to generate the exicutable file
+To change the starting positions simply uncomment the section of code that corresponds to some of the examples and comment the ones that were in use before.
+By default the program runs the mixed up example when compiled

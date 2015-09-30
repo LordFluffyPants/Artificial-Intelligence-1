@@ -5,7 +5,9 @@ import Problem6.src.SearchFunctions.AStarSearch;
 import Problem6.src.SearchFunctions.BFSearch;
 import Problem6.src.SearchFunctions.DFSearch;
 import Problem6.src.SearchFunctions.RBFSearch;
-
+/**
+ * Created by John Wesley Hayhurst & Austin Schaffer
+ */
 public class main {
 
     public static void main(String [] args)

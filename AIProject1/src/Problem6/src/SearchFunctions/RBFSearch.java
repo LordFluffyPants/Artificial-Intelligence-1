@@ -6,7 +6,9 @@ import Problem6.src.Puzzle.State;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
-
+/**
+ * Created by John Wesley Hayhurst & Austin Schaffer
+ */
 public class RBFSearch {
     private static int maxQueueSize = 0;
     private static int expansions = 0;

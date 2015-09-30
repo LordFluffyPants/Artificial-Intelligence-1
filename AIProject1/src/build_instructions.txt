@@ -1,0 +1,3 @@
+To build problem 6 you can run the JAR file and it will print out the search results according to the initial state given in initial_state.csv
+If the build is failing go to the source code and change ImportManager.java in the function importInitialState() to point to the correct file path location.
+If problem persists (call tech support), the source code takes in an int array, you can just create the array to see how it works as a last resort.

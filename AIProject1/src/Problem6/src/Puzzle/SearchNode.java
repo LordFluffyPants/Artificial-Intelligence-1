@@ -1,6 +1,8 @@
 package Problem6.src.Puzzle;
 
-
+/**
+ * Created by John Wesley Hayhurst & Austin Schaffer
+ */
 public class SearchNode {
     private State currentState;
     private SearchNode parent;
