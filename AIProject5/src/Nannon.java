@@ -283,8 +283,10 @@ public class Nannon {
 
 	private static NannonPlayer getPlayerBasedOnString(NannonGameBoard gb, String id) {
 		// Tell the players about the game board being used.
-		
-		if        (id.equalsIgnoreCase("random")             || id.equalsIgnoreCase("rand")) { // Allow some aliases.
+		if (id.equalsIgnoreCase("fullJoint"))
+		{
+			return new FullJointProbTablePlayer2(gb);
+		} else if        (id.equalsIgnoreCase("random")             || id.equalsIgnoreCase("rand")) { // Allow some aliases.
 			return new RandomNannonPlayer(gb);
 		} else if (id.equalsIgnoreCase("manual")) {
 			return new ManualPlayer(gb);
