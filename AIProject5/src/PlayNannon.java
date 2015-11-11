@@ -143,7 +143,7 @@ public class PlayNannon {
                 }
                
                 String[] args = Utils.chopCommentFromArgs(argsRaw);
-                String   arg1 = "random"; // See argsSpecString for other options.
+                String   arg1 = "fullJoint"; // See argsSpecString for other options.
                 String   arg2 = "greedyHandCoded";
                
                 if (args.length >= 1) { arg1 = args[0]; } // Override the defaults if args provided.
