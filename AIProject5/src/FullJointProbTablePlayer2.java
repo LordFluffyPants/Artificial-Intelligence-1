@@ -20,6 +20,9 @@ public class FullJointProbTablePlayer2 extends NannonPlayer{
         initialize();
     }
 
+    /**
+     * inits the two arrays lists to have 1 in each category. This insures that there is not a zero probability in each state
+     */
     private void initialize() {
         for (int [][][][][][][][] step_two : winning_board_next_with_move_effect_with_home_knowledge_states)
             for (int [][][][][][][] step_three : step_two)
@@ -47,6 +50,12 @@ public class FullJointProbTablePlayer2 extends NannonPlayer{
         return "Full Joint Probability Nannon Player";
     }
 
+    /**
+     * chooses the move based on the ratio of the probabilities of the states given a win over the states given a loss
+     * @param boardConfiguration the current board configuration
+     * @param legalMoves list of legal moves the player has to choose from
+     * @return the chosen mve
+     */
     @SuppressWarnings("unused")
     @Override
     public List<Integer> chooseMove(int[] boardConfiguration, List<List<Integer>> legalMoves) {
@@ -85,6 +94,13 @@ public class FullJointProbTablePlayer2 extends NannonPlayer{
         return null;
     }
 
+    /**
+     * updates the full joint probability table with the statistics of winning and losing
+     * @param didIwinThisGame if the player won the game
+     * @param allBoardConfigurationsThisGameForPlayer all board configurations for this game for the player
+     * @param allCountsOfPossibleMovesForPlayer all possible moves for the game of the player
+     * @param allMovesThisGameForPlayer all the moves for the game of the player
+     */
     @Override
     public void updateStatistics(boolean didIwinThisGame, List<int[]> allBoardConfigurationsThisGameForPlayer,
                                  List<Integer> allCountsOfPossibleMovesForPlayer, List<List<Integer>> allMovesThisGameForPlayer) {
@@ -106,8 +122,6 @@ public class FullJointProbTablePlayer2 extends NannonPlayer{
             int effect = moveChosen.get(2);
             from = (from == NannonGameBoard.movingFromHOME ? 0 : from);
             to   = (to   == NannonGameBoard.movingToSAFETY ? 0 : to);
-
-            // DO SOMETHING HERE.  See chooseMove() for an explanation of what is stored in currentBoard and resultingBoard.
 
             if (didIwinThisGame)
             {
