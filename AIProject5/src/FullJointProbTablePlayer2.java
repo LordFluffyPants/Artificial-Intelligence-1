@@ -32,7 +32,7 @@ public class FullJointProbTablePlayer2 extends NannonPlayer{
                             for(int [][][] step_seven : step_six)
                                 for (int[][] step_eight : step_seven)
                                     for (int [] step_nine : step_eight)
-                                Arrays.fill(step_nine,1);
+                                        Arrays.fill(step_nine,1);
 
         for (int [][][][][][][][] step_two : losing_board_next_with_move_effect_with_home_knowledge_states)
             for (int [][][][][][][] step_three : step_two)
