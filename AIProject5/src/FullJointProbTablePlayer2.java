@@ -125,10 +125,12 @@ public class FullJointProbTablePlayer2 extends NannonPlayer{
 
             if (didIwinThisGame)
             {
+                //updates winning probability count here
                 winning_board_next_with_move_effect_with_home_knowledge_states[resultingBoard[7]][resultingBoard[8]][resultingBoard[9]][resultingBoard[10]][resultingBoard[11]][resultingBoard[12]][effect][resultingBoard[1]][resultingBoard[2]]++;
             }
             else
             {
+                //updates winning probability count here
                 losing_board_next_with_move_effect_with_home_knowledge_states[resultingBoard[7]][resultingBoard[8]][resultingBoard[9]][resultingBoard[10]][resultingBoard[11]][resultingBoard[12]][effect][resultingBoard[1]][resultingBoard[2]]++;
             }
         }
