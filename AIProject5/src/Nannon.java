@@ -283,14 +283,27 @@ public class Nannon {
 
 	private static NannonPlayer getPlayerBasedOnString(NannonGameBoard gb, String id) {
 		// Tell the players about the game board being used.
-		if (id.equalsIgnoreCase("fullJoint"))
+		if (id.equalsIgnoreCase("bayesNet"))
+		{
+			return new BayesNetPlayer(gb);
+		}
+		else if (id.equalsIgnoreCase("naive"))
+		{
+			return new NaiveBayesNetPlayer(gb);
+		}
+		else if (id.equalsIgnoreCase("fullJoint"))
 		{
 			return new FullJointProbTablePlayer2(gb);
-		} else if        (id.equalsIgnoreCase("random")             || id.equalsIgnoreCase("rand")) { // Allow some aliases.
+		} else if        (id.equalsIgnoreCase("random")             || id.equalsIgnoreCase("rand"))
+		{
+			// Allow some aliases.
 			return new RandomNannonPlayer(gb);
-		} else if (id.equalsIgnoreCase("manual")) {
+		}
+		else if (id.equalsIgnoreCase("manual"))
+		{
 			return new ManualPlayer(gb);
-		} else if (id.equalsIgnoreCase("GUI")) {
+		} else if (id.equalsIgnoreCase("GUI"))
+		{
 			return new GUI_Player(gb);
 		// My various solutions are not being released since it is too easy to "reverse compile" them and see the Java code.
 		// I (Jude) am leaving this code here so I can uncomment the cases I wish to try out on my computer.
