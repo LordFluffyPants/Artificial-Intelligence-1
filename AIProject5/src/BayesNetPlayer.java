@@ -7,11 +7,11 @@ import java.util.List;
  */
 public class BayesNetPlayer extends NannonPlayer{
 
-    private int [][][][][][][][]  winning_next_state_with_my_home_state = new int[3][3][3][3][3][3][4][4];
+    private int [][][][][][][][] winning_next_state_with_home_states = new int[3][3][3][3][3][3][4][4];
     private int [] winning_move_effect = new int[12];
     private int win_count = 1;
 
-    private int [][][][][][][][] losing_next_state_with_my_home_state = new int[3][3][3][3][3][3][4][4];
+    private int [][][][][][][][] losing_next_state_with_home_states = new int[3][3][3][3][3][3][4][4];
     private int [] losing_move_effect = new int[12];
     private int lose_count = 1;
 
@@ -24,7 +24,7 @@ public class BayesNetPlayer extends NannonPlayer{
     private void initialize()
     {
         //init winning states
-        for (int [][][][][][][] step_one : winning_next_state_with_my_home_state)
+        for (int [][][][][][][] step_one : winning_next_state_with_home_states)
             for (int [][][][][][] step_two : step_one)
                 for (int [][][][][] step_three: step_two )
                     for (int [][][][] step_four : step_three)
@@ -35,7 +35,7 @@ public class BayesNetPlayer extends NannonPlayer{
         Arrays.fill(winning_move_effect,1);
 
         //init losing states
-        for (int [][][][][][][] step_one : losing_next_state_with_my_home_state)
+        for (int [][][][][][][] step_one : losing_next_state_with_home_states)
             for (int [][][][][][] step_two : step_one)
                 for (int [][][][][] step_three: step_two )
                     for (int [][][][] step_four : step_three)
@@ -69,12 +69,12 @@ public class BayesNetPlayer extends NannonPlayer{
                 int[] resultingBoard = gameBoard.getNextBoardConfiguration(boardConfiguration, move);
 
                 //calculate states given win probabilities here
-                double prob_next_state_and_home_state_given_win = (double) winning_next_state_with_my_home_state[resultingBoard[7]][resultingBoard[8]][resultingBoard[9]][resultingBoard[10]][resultingBoard[11]][resultingBoard[12]][resultingBoard[1]][resultingBoard[2]] / (double) win_count;
+                double prob_next_state_and_home_state_given_win = (double) winning_next_state_with_home_states[resultingBoard[7]][resultingBoard[8]][resultingBoard[9]][resultingBoard[10]][resultingBoard[11]][resultingBoard[12]][resultingBoard[1]][resultingBoard[2]] / (double) win_count;
                 double prob_move_effect_given_win = (double) winning_move_effect[effect] / (double) win_count;
                 double prob_win = (double) win_count / ((double)win_count + (double)lose_count);
 
                 //calculate states given loss probabilities here
-                double prob_next_state_and_home_state_given_loss = (double) losing_next_state_with_my_home_state[resultingBoard[7]][resultingBoard[8]][resultingBoard[9]][resultingBoard[10]][resultingBoard[11]][resultingBoard[12]][resultingBoard[1]][resultingBoard[2]] / (double) lose_count;
+                double prob_next_state_and_home_state_given_loss = (double) losing_next_state_with_home_states[resultingBoard[7]][resultingBoard[8]][resultingBoard[9]][resultingBoard[10]][resultingBoard[11]][resultingBoard[12]][resultingBoard[1]][resultingBoard[2]] / (double) lose_count;
                 double prob_move_effect_given_loss = (double) losing_move_effect[effect] / (double) lose_count;
                 double prob_lose = (double) lose_count / ((double)lose_count + (double)win_count);
 
@@ -126,13 +126,13 @@ public class BayesNetPlayer extends NannonPlayer{
             if (didIwinThisGame)
             {
                 //updates winning probability counts here
-                winning_next_state_with_my_home_state[resultingBoard[7]][resultingBoard[8]][resultingBoard[9]][resultingBoard[10]][resultingBoard[11]][resultingBoard[12]][resultingBoard[1]][resultingBoard[2]]++;
+                winning_next_state_with_home_states[resultingBoard[7]][resultingBoard[8]][resultingBoard[9]][resultingBoard[10]][resultingBoard[11]][resultingBoard[12]][resultingBoard[1]][resultingBoard[2]]++;
                 winning_move_effect[effect]++;
             }
             else
             {
                 //updates losing probability counts here
-                losing_next_state_with_my_home_state[resultingBoard[7]][resultingBoard[8]][resultingBoard[9]][resultingBoard[10]][resultingBoard[11]][resultingBoard[12]][resultingBoard[1]][resultingBoard[2]]++;
+                losing_next_state_with_home_states[resultingBoard[7]][resultingBoard[8]][resultingBoard[9]][resultingBoard[10]][resultingBoard[11]][resultingBoard[12]][resultingBoard[1]][resultingBoard[2]]++;
                 losing_move_effect[effect]++;
             }
         }
