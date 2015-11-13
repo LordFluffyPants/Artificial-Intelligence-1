@@ -285,15 +285,15 @@ public class Nannon {
 		// Tell the players about the game board being used.
 		if (id.equalsIgnoreCase("bayesNet"))
 		{
-			return new BayesNetPlayer(gb);
+			return new BayesNetPlayer_Hayhurst_Whitten_Charette(gb);
 		}
 		else if (id.equalsIgnoreCase("naive"))
 		{
-			return new NaiveBayesNetPlayer(gb);
+			return new NaiveBayesNetPlayer_Hayhurst_Whitten_Charette(gb);
 		}
 		else if (id.equalsIgnoreCase("fullJoint"))
 		{
-			return new FullJointProbTablePlayer2(gb);
+			return new FullJointProbTablePlayer_Hayhurst_Whitten_Charette(gb);
 		} else if        (id.equalsIgnoreCase("random")             || id.equalsIgnoreCase("rand"))
 		{
 			// Allow some aliases.

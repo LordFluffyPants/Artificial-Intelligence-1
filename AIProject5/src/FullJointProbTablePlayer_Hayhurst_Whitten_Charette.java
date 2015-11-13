@@ -3,10 +3,8 @@ import java.util.Arrays;
 import java.util.List;
 
 
-/**
- * Created by jakehayhurst on 11/9/15.
- */
-public class FullJointProbTablePlayer2 extends NannonPlayer{
+
+public class FullJointProbTablePlayer_Hayhurst_Whitten_Charette extends NannonPlayer{
 
     private int [][][][][][][][][] winning_board_next_with_move_effect_with_home_knowledge_states = new int[3][3][3][3][3][3][12][4][4];
     private int [][][][][][][][][] losing_board_next_with_move_effect_with_home_knowledge_states = new int[3][3][3][3][3][3][12][4][4];
@@ -14,7 +12,7 @@ public class FullJointProbTablePlayer2 extends NannonPlayer{
     private int number_of_losses = 1;
 
 
-    public FullJointProbTablePlayer2(NannonGameBoard gameBoard)
+    public FullJointProbTablePlayer_Hayhurst_Whitten_Charette(NannonGameBoard gameBoard)
     {
         super(gameBoard);
         initialize();

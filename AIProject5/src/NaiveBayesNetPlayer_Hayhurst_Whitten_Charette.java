@@ -2,10 +2,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by jakehayhurst on 11/9/15.
- */
-public class NaiveBayesNetPlayer extends NannonPlayer {
+
+public class NaiveBayesNetPlayer_Hayhurst_Whitten_Charette extends NannonPlayer {
 
     private int [] winning_my_home_state = new int[4];
     private int [] winning_opponent_home_state = new int[4];
@@ -19,7 +17,7 @@ public class NaiveBayesNetPlayer extends NannonPlayer {
     private int [][][][][][] losing_next_board_state = new int[3][3][3][3][3][3];
     private int loss_count = 1;
 
-    public NaiveBayesNetPlayer(NannonGameBoard gameBoard)
+    public NaiveBayesNetPlayer_Hayhurst_Whitten_Charette(NannonGameBoard gameBoard)
     {
         super(gameBoard);
         initialize();
