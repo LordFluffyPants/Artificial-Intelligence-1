@@ -1,0 +1,27 @@
+The first position on the game board can be one of three states: occupied by your piece, occupied by your opponents piece, and empty. As a result, the first dimension of the array has a length of three, one entry for each possible state. Each element in the first dimension contains an array of length three, which each second dimension element representing a possible state for the second position on the game board. Each second element contains an array of length three and so on, until we have the sixth dimension of our array where every element is initialized to 1. This six dimensional array contains every possible board state. The values stored in the sixth dimension of the array represent the number of times that board state has won or lost. (This is why two arrays are required, one to measure the number of times that board state has been part of a winning game, and one to measure the number of times it has been part of a loosing one) Every sixth dimensional element is initialized to 1 rather than 0 as a result of smoothing due to the issues associated with probabilities of 0. 
+
+The other variables which are measured are the number of pieces you have in your home, the number of pieces your opponent has in their home, and the effect of a given move. (Move effects are defined in the given code, and twelve possible move effects exist)  
+
+To initialize these probabilities, all three algorithms go through a burn in period. This burn in period provides the algorithms with an even number of wins and losses. This allows the algorithms to learn about the variables in relation to the probability that they lead to a win or to a loss. This allows our algorithms to effectively start games, instead of starting games naively i.e. not having any information to make an educated decision.   
+
+After a game is played, all of the three algorithms call a function called updateStatistics. This function goes through all the variables over the course of the entire game and increments the probability that those variables lead to a win or a loss. I.e. the function loops through all the moves taken by the algorithm during the game and for every move, finds that move in the winning game board array or the loosing one (depending on if the game ended in a win or a loss) and then increments the sixth dimensional element which corresponds to the move. 
+
+For each turn the algorithms play in a game, they must calculate which move out of all the possible moves is going to be the best move. (The one with the highest probability to lead to a win) The probability calculations are as follows: 
+
+For the Full Joint Probability ratio calculation 
+( P(the next board state with the move effect with my home state with my opponents home state | win) * P(win) ) / ( P(the next board state with the move effect with my home state with my opponents home state | loss) * P(loss) )
+
+For the Naive Bayes ratio calculations
+( P(the next board state | win) * P(move effect | win) * P(my home state | win) * P(my opponents home state | win) * P(win) ) / ( P(the next board state | loss) * P(move effect | loss) * P(my home state | loss) * P(my opponents home state | loss) * P(loss))
+
+For the Bayes Net ratio calculations
+( P(the next board state with my home state with my opponents home state | win) * P(move effect | win)  * P(win)) / ( P(the next board state with my home state with my opponents home state | loss) * P(move effect | loss) * P(loss))
+
+
+
+Here are our Win avergages: 
+
+						Full Joint Prob Table   Naive Bayes      	Bayes Network     	Hand Codded Greedy		Random
+Full Joint Prob Table   50 %					54.51008 %			50.7792564 %		55.0369132 %			68.9889249 %
+Naive Bayes      		45.6537 %				50 %				45.84904 %			50.22746 %				63.50588 %
+Bayes Network      		50.7792564 %			45.84904 %			50 %				54.69362 %				68.87432 %

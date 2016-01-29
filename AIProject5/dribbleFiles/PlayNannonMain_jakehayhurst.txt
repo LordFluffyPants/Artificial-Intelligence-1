@@ -1,0 +1,23 @@
+% Running on host: FancyLappy486
+NannonGUI:  setBounds: width = 0, height = 0
+NannonGUI:  setBounds: width = 539, height = 353
+
+% This is the console of the Nannon GUI.
+% (Do a control-C here if the program appears to be hanging.)
+
+500,000 post burn-in games played so far.  Took 10 seconds.
+  Player X (Full Joint Probability Nannon Player) won 250,746 games (50.15%) and
+  Player O (Full Joint Probability Nannon Player) won 249,253 games (49.85%).
+1,000,000 post burn-in games played so far.  Took 2 minutes and 41 seconds.
+  Player X (Full Joint Probability Nannon Player) won 501,921 games (50.19%) and
+  Player O (Full Joint Probability Nannon Player) won 498,078 games (49.81%).
+
+Player X (Full Joint Probability Nannon Player) won 501,922 games (50.19%) and Player O (Full Joint Probability Nannon Player) won 498,078 games (49.81%).
+It took 3 minutes and 14 seconds to play 1,100,000 games. The numberOfGamesInBurnInPhase = 100,000.
+    The mean number of turns per game:                      7.00  // These stats are for post burn-in games only.
+    The mean number of no-possible-moves per game for X:    0.35
+    The mean number of no-possible-moves per game for O:    0.35
+    The mean number of forced moves per game for X:         2.94
+    The mean number of forced moves per game for O:         2.94
+The Full Joint Probability Table Implementation of Nannon
+The Full Joint Probability Table Implementation of Nannon
